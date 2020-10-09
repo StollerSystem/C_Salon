@@ -68,5 +68,13 @@ namespace HairSalon.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    [HttpPost] //Filter
+    public ActionResult Index(string name)
+    {
+      List<Stylist> model = _db.Stylists.Where(x => x.Name.Contains(name)).ToList();      
+      List<Stylist> sortedList = model.OrderBy(o => o.Name).ToList();
+      return View("Index", sortedList);
+    }
   }
 }

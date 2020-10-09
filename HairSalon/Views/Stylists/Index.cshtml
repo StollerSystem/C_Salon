@@ -17,5 +17,15 @@
   <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
 }
 
+@using (Html.BeginForm())
+{
+  @* @Html.Label("Filter stylists by Name")
+  @Html.TextBox("Name", 
+    new {@required="required"}) *@
+  <label for="Name">Filter by name:</label>
+  <input type="text" id="Name" name="name" required> 
+  <input type="submit" value="Filter" class="btn btn-info btn-sm"/> 
+}
+<p>@Html.ActionLink("Show all Stylists", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
 <p>@Html.ActionLink("Add new Stylist", "Create", null,null, new { @class = "btn btn-info btn-large" })</p>
 <p>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-info btn-large" })</p>
