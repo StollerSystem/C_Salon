@@ -12,10 +12,14 @@
   {
     <h3>No stylists found!</h3>
   } 
-  @foreach (Stylist stylist in Model)
-  {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
-  }
+  <div class="lists">
+    <ul>
+      @foreach (Stylist stylist in Model)
+      {
+        <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+      }
+    </ul>
+  </div>
   @using (Html.BeginForm())
   {  
     <label for="Name">Filter by name:</label>

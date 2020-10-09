@@ -12,10 +12,14 @@
   {
     <h3>No clients found</h3>
   } 
-  @foreach (Client client in Model)
-  {
-    <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | Stylist: @client.Stylist.Name</li>
-  }
+  <div class="lists">
+    <ul >
+    @foreach (Client client in Model)
+    {
+      <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | Stylist: @client.Stylist.Name</li>
+    }
+    </ul>
+  </div>
   @using (Html.BeginForm())
   {  
     <label for="Name">Filter by name:</label>

@@ -13,7 +13,7 @@
       new {@required="required"})
       @Html.LabelFor(model => model.Stylist)
       @Html.DropDownList("StylistId", null, "Please Select", htmlAttributes: new{required = "Please select a stylist"})
-      <input type="submit" value="Add new client" class="btn btn-default" />
+      <input type="submit" value="Add new client" class="btn btn-info btn-large" />
   }
   <p>@Html.ActionLink("Show all clients", "Index",null, null, new { @class = "btn btn-info btn-large" })</p>
 </div>
