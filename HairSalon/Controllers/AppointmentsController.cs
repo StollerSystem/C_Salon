@@ -79,13 +79,16 @@ namespace HairSalon.Controllers
       return RedirectToAction("Index");
     }
     
-    // [HttpPost] 
-    // public ActionResult Index(string name)
-    // {
-    //   List<Appointment> model = _db.Appointments.Include(Appointments => Appointments.Stylist).Where(x => x.Name.Contains(name)).ToList();      
-    //   List<Appointment> sortedList = model.OrderBy(o => o.Title).ToList();
-    //   ViewBag.filterName = "Filtering by: "+Title;
-    //   return View("Index", sortedList);
-    // }
+    [HttpPost] 
+    public ActionResult Index(string title)
+    {
+      List<Appointment> model = _db.Appointments
+      .Include(Appointments => Appointments.Stylist)
+      .Include(Appointments => Appointments.Client)
+      .Where(x => x.Title.Contains(title)).ToList();      
+      List<Appointment> sortedList = model.OrderBy(o => o.Title).ToList();
+      ViewBag.filterName = "Filtering by: "+title;
+      return View("Index", sortedList);
+    }
   }
 }

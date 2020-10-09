@@ -10,6 +10,7 @@
   <hr />
   <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
   <h4>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h4>
+  <hr />
   <h4>Clients:</h4>
   <div class="lists"> 
     <ul>  
@@ -23,6 +24,23 @@
       }
     </ul>
   </div>
+  <h4>Appointments:</h4>
+  <div class="lists">
+    <ul>  
+      @if (@Model.Appointments.Count == 0)
+      {
+        <p>no appointments found</p>
+      }
+      @foreach (Appointment appointment in @Model.Appointments)
+      {
+        <li>@appointment.Title | @appointment.Date | @appointment.Time</li>
+      }
+    </ul>
+  </div>
+  
+
+
+
   <p>@Html.ActionLink("Edit Stylist", "Edit",null, new { id = Model.StylistId }, new { @class = "btn btn-info btn-sm" })</p>
   <p>@Html.ActionLink("Delete Stylist", "Delete",null, new { id = Model.StylistId }, new { @class = "btn btn-info btn-sm" })</p>
   <p>@Html.ActionLink("Back to stylists", "Index",null, null, new { @class = "btn btn-info btn-sm" })</p>
