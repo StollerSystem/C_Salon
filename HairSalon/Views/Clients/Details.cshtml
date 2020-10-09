@@ -4,9 +4,11 @@
 
 @model HairSalon.Models.Client
 
-<h2>Client Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<p>@Html.ActionLink("Back to list", "Index",null, null, new { @class = "btn btn-info btn-large" })</p>
-<p>@Html.ActionLink("Edit Client", "Edit", null, new { id = Model.ClientId }, new { @class = "btn btn-info btn-sm" })</p>
-<p>@Html.ActionLink("Delete Client", "Delete", null, new { id = Model.ClientId }, new { @class = "btn btn-info btn-sm" })</p>
+<div class="mainBox">
+  <h2>Client Details</h2>
+  <hr />
+  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+  <p>@Html.ActionLink("Back to list", "Index",null, null, new { @class = "btn btn-info btn-large" })</p>
+  <p>@Html.ActionLink("Edit Client", "Edit", null, new { id = Model.ClientId }, new { @class = "btn btn-info btn-sm" })</p>
+  <p>@Html.ActionLink("Delete Client", "Delete", null, new { id = Model.ClientId }, new { @class = "btn btn-info btn-sm" })</p>
+</div>
