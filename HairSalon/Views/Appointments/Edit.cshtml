@@ -2,15 +2,15 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.Client
+@model HairSalon.Models.Appointment
 
 <div class="mainBox">
-  <h2>Edit Client</h2>
+  <h2>Edit Appointment</h2>
   <hr />
-  <h4>Edit this client @Html.DisplayFor(model => model.Name)</h4>
+  <h4>Edit this Appointment @Html.DisplayFor(model => model.Name)</h4>
   @using (Html.BeginForm())
   {
-      @Html.HiddenFor(model => model.ClientId)
+      @Html.HiddenFor(model => model.AppointmentId)
 
       @Html.LabelFor(model => model.Name)
       @Html.TextBoxFor(model => model.Name, 

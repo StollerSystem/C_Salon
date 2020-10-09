@@ -41,7 +41,10 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
-      Appointment thisAppointment = _db.Appointments.Include(Appointments => Appointments.Stylist).FirstOrDefault(Appointments => Appointments.AppointmentId == id);
+      Appointment thisAppointment = _db.Appointments
+      .Include(Appointments => Appointments.Stylist)
+      .Include(Appointments => Appointments.Client)
+      .FirstOrDefault(Appointments => Appointments.AppointmentId == id);
       return View(thisAppointment);
     }
 
