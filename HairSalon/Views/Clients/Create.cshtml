@@ -12,7 +12,7 @@
     new {@required="required"})
 
     @Html.LabelFor(model => model.Stylist)
-    @Html.DropDownList("StylistId")
+    @Html.DropDownList("StylistId", null, "Please Select", htmlAttributes: new{required = "Please select a stylist"})
 
     <input type="submit" value="Add new client" class="btn btn-default" />
 }
