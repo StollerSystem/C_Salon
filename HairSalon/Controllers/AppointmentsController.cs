@@ -52,6 +52,7 @@ namespace HairSalon.Controllers
     {
       var thisAppointment = _db.Appointments.FirstOrDefault(Appointments => Appointments.AppointmentId == id);
       ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+      ViewBag.ClientId = new SelectList(_db.Clients, "ClientId", "Name");
       return View(thisAppointment);
     }
 
