@@ -7,6 +7,7 @@
 
 <div class="mainBox">
   <h2>Stylists</h2>
+  <hr />
   <h4>@ViewBag.filterName</h4>
   @if (@Model.Count == 0)
   {
@@ -16,7 +17,7 @@
     <ul>
       @foreach (Stylist stylist in Model)
       {
-        <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+        <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) | @stylist.Specialty</li>
       }
     </ul>
   </div>
