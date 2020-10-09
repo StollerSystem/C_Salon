@@ -1,0 +1,58 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(214, 214, 214);
+}
+
+.container {
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 600px;
+}
+
+
+
+div#header {
+  height: 80px;
+}
+
+#imageHome {
+  width: 32px;
+  margin-top: 4px;
+}
+
+#imageHome:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+ul#headerList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 12%;
+  overflow: hidden;
+  background-color: rgb(118, 0, 191);
+}
+
+li#headerUl {
+  float: right;
+}
+
+li#homeImageUl {
+  float: left;
+  margin-left: 14%;
+}
+
+li#headerUl a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li#headerUl a:hover {
+  background-color: rgb(192, 64, 5);
+}
