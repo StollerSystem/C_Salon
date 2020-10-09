@@ -2,11 +2,11 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(214, 214, 214);
+  background-color:#7785AC;
 }
 
 .container {
-  background-color: white;
+  background-color: #ffffff;
   padding: 10px;
   padding-bottom: 600px;
 }
@@ -21,7 +21,7 @@ div#header {
 }
 
 #imageHome:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: #A5E6BA;
   border-radius: 5px;
 }
 
@@ -31,7 +31,7 @@ ul#headerList {
   padding: 0;
   padding-right: 12%;
   overflow: hidden;
-  background-color: rgb(118, 0, 191);
+  background-color: #360568;
 }
 
 li#headerUl {
@@ -52,9 +52,32 @@ li#headerUl a {
 }
 
 li#headerUl a:hover {
-  background-color: rgb(240, 240, 240);
+  background-color: #A5E6BA;
+  color: #5B2A86;
 }
 
 h1 {
   text-align: center;
+  color: white;
+  font-size: 50px;
+  
+}
+
+.btn {
+ background-color: #5B2A86;
+}
+
+.homeImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://www.texasfreshair.org/wp-content/uploads/2019/04/hairstilist.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+#footer {
+  background-color: black;
 }

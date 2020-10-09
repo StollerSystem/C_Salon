@@ -9,7 +9,8 @@
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
-<ul>
+<h4>Clients:</h4>
+<ul>  
 @if (@Model.Clients.Count == 0)
 {
   <p>no clients found</p>
@@ -22,5 +23,5 @@
 </ul>
 
 <p>@Html.ActionLink("Back to stylists", "Index",null, null, new { @class = "btn btn-info btn-large" })</p>
-<p>@Html.ActionLink("Edit Stylist", "Edit",null, new { id = Model.StylistId }, new { @class = "btn btn-info btn-large" })</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete",null, new { id = Model.StylistId }, new { @class = "btn btn-info btn-large" })</p>
+<p>@Html.ActionLink("Edit Stylist", "Edit",null, new { id = Model.StylistId }, new { @class = "btn btn-info btn-sm" })</p>
+<p>@Html.ActionLink("Delete Stylist", "Delete",null, new { id = Model.StylistId }, new { @class = "btn btn-info btn-sm" })</p>
