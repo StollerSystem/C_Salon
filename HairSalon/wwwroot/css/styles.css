@@ -67,6 +67,7 @@ h1 {
 .btn {
  background-color: #5B2A86;
  margin: 2px;
+ margin-left: 0px;
 }
 
 .homeImage {
@@ -105,4 +106,10 @@ h1 {
   margin-bottom: 8px;
   /* padding: 5px; */
   padding-top: 10px;
+}
+
+.delete {
+  background-color: tomato;
+  margin: 2px;
+  margin-left: 0px;
 }

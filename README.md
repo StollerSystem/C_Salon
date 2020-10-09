@@ -6,7 +6,7 @@
 
 ## Description
 
-This app will allow you to add Stylists which will be saved to a database. Then you can add Clients which will each be linked to one Stylist. You can navigate to different pages to list stylists/clients, add them, edit and delete them. 
+This app will allow you to add Stylists which will be saved to a database. Then you can add Clients which will also be saved and  linked to one Stylist. You can navigate to different pages to list stylists/clients, add them, edit and delete them. 
 Each page that lists out stylists/clients also has a filter function to search for specific names. 
 
 ## Setup/Installation Requirements
@@ -47,7 +47,7 @@ https://github.com/StollerSystem
 
 ## Technologies Used
 
-C#, LINQ, Entity Framework Core, MVCTest, MySql, CSHTML, CSS, Bootstrap and Markdown.
+C#, LINQ, Entity Framework Core, MySql, CSHTML, CSS, Bootstrap and Markdown.
 
 
 ### License
