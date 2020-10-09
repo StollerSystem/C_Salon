@@ -66,6 +66,7 @@ h1 {
 
 .btn {
  background-color: #5B2A86;
+ margin: 2px;
 }
 
 .homeImage {
@@ -101,7 +102,7 @@ h1 {
 .lists {
   border: solid black;
   border-width: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   /* padding: 5px; */
   padding-top: 10px;
 }

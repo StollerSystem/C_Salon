@@ -9,12 +9,12 @@
   <h2>Stylists</h2>
   <hr />
   <h4>@ViewBag.filterName</h4>
-  @if (@Model.Count == 0)
-  {
-    <h3>No stylists found!</h3>
-  } 
   <div class="lists">
     <ul>
+      @if (@Model.Count == 0)
+      {
+        <li><strong>No stylists found</strong></li>
+      } 
       @foreach (Stylist stylist in Model)
       {
         <li><strong>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) </strong>| @stylist.Specialty</li>
@@ -26,8 +26,8 @@
     <label for="Name">Filter by name:</label>
     <input type="text" id="Name" name="name" required> 
     <input type="submit" value="Filter" class="btn btn-info btn-sm"/> 
+    @Html.ActionLink("Show all Stylists", "Index", null, null, new { @class = "btn btn-info btn-sm" })
   }
-  <p>@Html.ActionLink("Show all Stylists", "Index", null, null, new { @class = "btn btn-info btn-sm" })</p>
   <p>@Html.ActionLink("Add new Stylist", "Create", null,null, new { @class = "btn btn-info btn-large" })</p>
-  <p>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-info btn-sm" })</p>
+  <p>@Html.ActionLink("Home", "Index", "Home")</p>
 </div>
