@@ -17,7 +17,7 @@
     <ul>
       @foreach (Stylist stylist in Model)
       {
-        <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) | @stylist.Specialty</li>
+        <li><strong>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) </strong>| @stylist.Specialty</li>
       }
     </ul>
   </div>

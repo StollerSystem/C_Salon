@@ -11,12 +11,12 @@
   @using (Html.BeginForm())
   {
       @Html.HiddenFor(model => model.StylistId)
-
       @Html.LabelFor(model => model.Name)
       @Html.TextBoxFor(model => model.Name, 
       new {@required="required"})
-      
-
+      @Html.LabelFor(model => model.Specialty)
+      @Html.TextBoxFor(model => model.Specialty, 
+      new {@required="required"})
       <input type="submit" value="Save" />
   }
   <p>@Html.ActionLink("Back to stylists", "Index",null,null, new { @class = "btn btn-info btn-large" })</p>
