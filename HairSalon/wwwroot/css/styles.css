@@ -11,8 +11,6 @@ body, html {
   padding-bottom: 600px;
 }
 
-
-
 div#header {
   height: 80px;
 }
@@ -54,7 +52,7 @@ li#headerUl a {
 }
 
 li#headerUl a:hover {
-  background-color: rgb(192, 64, 5);
+  background-color: rgb(240, 240, 240);
 }
 
 h1 {
